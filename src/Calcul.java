@@ -1,50 +1,49 @@
 public class Calcul {
 
-    int res = 0;
+    double res = 0;
 
-    public int addition(int premnbr, int secondnbr) {
+    public void addition(double premnbr, double secondnbr) {
         res = premnbr + secondnbr;
-        return res;
     }
 
-    public int soustraction(int premnbr, int secondnbr) {
+    public void soustraction(double premnbr, double secondnbr) {
         res = premnbr - secondnbr;
-        return res;
+
     }
 
-    public int division(int premnbr, int secondnbr) {
+    public void division(double premnbr, double secondnbr) {
         res = premnbr / secondnbr;
-        return res;
+
     }
 
-    public int multiplication(int premnbr, int secondnbr) {
+    public void multiplication(double premnbr, double secondnbr) {
 
         res = premnbr * secondnbr;
 
-        return res;
+
     }
 
-    public int rajoutadd(int res, int rajout) {
+    public double rajoutadd(double res, double rajout) {
         res += rajout;
         return this.res = res;
     }
 
-    public int rajoutsous(int res, int rajout) {
+    public double rajoutsous(double res, double rajout) {
         res -= rajout;
         return this.res = res;
     }
 
-    public int rajoutdiv(int res, int rajout) {
+    public double rajoutdiv(double res, double rajout) {
         res /= rajout;
         return this.res = res;
     }
 
-    public int rajoutmult(int res, int rajout) {
+    public double rajoutmult(double res, double rajout) {
         res *= rajout;
         return this.res = res;
     }
 
-    public int getRes() {
+    public double getRes() {
         return this.res;
     }
 

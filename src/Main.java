@@ -14,7 +14,7 @@ public class Main {
             try {
                 System.out.println("Historique : " + liste);
                 System.out.println("Que souhaitez vous faire ?\n1.Addition\n2.Soustration\n3.Multiplication\n4.Division");
-                int choix = sc.nextInt();
+               double choix = sc.nextInt();
 
                 if (choix < 1 || choix > 4) {
                     System.out.println("Erreur : Veuillez choisir un nombre entre 1 et 4");
@@ -25,9 +25,9 @@ public class Main {
                 if (choix == 1) {
                     try {
                         System.out.println("Premier chiffre a additionner : ");
-                        int premnbr = sc.nextInt();
+                       double premnbr = sc.nextInt();
                         System.out.println("Second chiffre a additionner : ");
-                        int secnbr = sc.nextInt();
+                       double secnbr = sc.nextInt();
                         calcul.addition(premnbr, secnbr);
                         liste.add(premnbr + "+" + secnbr + "=" + calcul.getRes());
                     } catch (InputMismatchException e) {
@@ -39,9 +39,9 @@ public class Main {
                 } else if (choix == 2) {
                     try {
                         System.out.println("Premier chiffre a soustraire : ");
-                        int premnbr = sc.nextInt();
+                       double premnbr = sc.nextInt();
                         System.out.println("Second chiffre a soustraire : ");
-                        int secnbr = sc.nextInt();
+                       double secnbr = sc.nextInt();
                         calcul.soustraction(premnbr, secnbr);
                         liste.add(premnbr + "-" + secnbr + "=" + calcul.getRes());
                     } catch (InputMismatchException e) {
@@ -53,9 +53,9 @@ public class Main {
                 } else if (choix == 3) {
                     try {
                         System.out.println("Premier chiffre a multiplier : ");
-                        int premnbr = sc.nextInt();
+                       double premnbr = sc.nextInt();
                         System.out.println("Second chiffre a multiplier : ");
-                        int secnbr = sc.nextInt();
+                       double secnbr = sc.nextInt();
                         calcul.multiplication(premnbr, secnbr);
                         liste.add(premnbr + "*" + secnbr + "=" + calcul.getRes());
                     } catch (InputMismatchException e) {
@@ -67,9 +67,9 @@ public class Main {
                 } else if (choix == 4) {
                     try {
                         System.out.println("Premier chiffre a diviser : ");
-                        int premnbr = sc.nextInt();
+                       double premnbr = sc.nextInt();
                         System.out.println("Second chiffre a diviser : ");
-                        int secnbr = sc.nextInt();
+                       double secnbr = sc.nextInt();
                         if (secnbr == 0) {
                             System.out.println("Erreur : Division par zéro impossible");
                             continue;
@@ -83,14 +83,14 @@ public class Main {
                     }
                 }
 
-                int res = calcul.getRes();
+                double res = calcul.getRes();
                 boolean ajout_ope = true;
 
                 while (ajout_ope) {
                     try {
                         System.out.println("Historique : " + liste);
                         System.out.println("Resultat : " + res + ",  Ajouter une opération ? 1.Oui 2.Non");
-                        int choixSuite = sc.nextInt();
+                       double choixSuite = sc.nextInt();
 
                         if (choixSuite != 1 && choixSuite != 2) {
                             System.out.println("Erreur : Veuillez choisir 1 ou 2");
@@ -99,7 +99,7 @@ public class Main {
 
                         if (choixSuite == 1) {
                             System.out.println("1.Additioner\n2.Soustration\n3.Multiplication\n4.Division");
-                            int choixadd = sc.nextInt();
+                           double choixadd = sc.nextInt();
 
                             if (choixadd < 1 || choixadd > 4) {
                                 System.out.println("Erreur : Veuillez choisir un nombre entre 1 et 4");
@@ -109,33 +109,33 @@ public class Main {
                             try {
                                 if (choixadd == 1) {
                                     System.out.println("Quel chiffre additionner a " + res + " ?");
-                                    int chiffreadd = sc.nextInt();
-                                    int resbef = calcul.getRes();
+                                   double chiffreadd = sc.nextInt();
+                                    double resbef = calcul.getRes();
                                     calcul.rajoutadd(res, chiffreadd);
                                     res = calcul.getRes();
                                     liste.add(resbef + "+" + chiffreadd + "=" + calcul.getRes());
                                 } else if (choixadd == 2) {
                                     System.out.println("Quel chiffre soustraire a " + res + " ?");
-                                    int chiffreadd = sc.nextInt();
-                                    int resbef = calcul.getRes();
+                                   double chiffreadd = sc.nextInt();
+                                    double resbef = calcul.getRes();
                                     calcul.rajoutsous(res, chiffreadd);
                                     res = calcul.getRes();
                                     liste.add(resbef + "6" + chiffreadd + "=" + calcul.getRes());
                                 } else if (choixadd == 3) {
                                     System.out.println("Quel chiffre multiplier a " + res + " ?");
-                                    int chiffreadd = sc.nextInt();
-                                    int resbef = calcul.getRes();
+                                   double chiffreadd = sc.nextInt();
+                                    double resbef = calcul.getRes();
                                     calcul.rajoutmult(res, chiffreadd);
                                     res = calcul.getRes();
                                     liste.add(resbef + "*" + chiffreadd + "=" + calcul.getRes());
                                 } else if (choixadd == 4) {
                                     System.out.println("Quel chiffre diviser a " + res + " ?");
-                                    int chiffreadd = sc.nextInt();
+                                   double chiffreadd = sc.nextInt();
                                     if (chiffreadd == 0) {
                                         System.out.println("Erreur : Division par zéro impossible");
                                         continue;
                                     }
-                                    int resbef = calcul.getRes();
+                                    double resbef = calcul.getRes();
                                     calcul.rajoutdiv(res, chiffreadd);
                                     res = calcul.getRes();
                                     liste.add(resbef + "/" + chiffreadd + "=" + calcul.getRes());
@@ -159,7 +159,7 @@ public class Main {
 
                 try {
                     System.out.println("Refaire un calcul ? 1.Oui 2.Non");
-                    int quit = sc.nextInt();
+                   double quit = sc.nextInt();
                     if (quit != 1 && quit != 2) {
                         System.out.println("Erreur : Veuillez choisir 1 ou 2");
                         continue;
