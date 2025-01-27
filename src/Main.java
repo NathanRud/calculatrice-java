@@ -120,14 +120,14 @@ public class Main {
                                     int resbef = calcul.getRes();
                                     calcul.rajoutsous(res, chiffreadd);
                                     res = calcul.getRes();
-                                    liste.add(resbef + "+" + chiffreadd + "=" + calcul.getRes());
+                                    liste.add(resbef + "6" + chiffreadd + "=" + calcul.getRes());
                                 } else if (choixadd == 3) {
                                     System.out.println("Quel chiffre multiplier a " + res + " ?");
                                     int chiffreadd = sc.nextInt();
                                     int resbef = calcul.getRes();
                                     calcul.rajoutmult(res, chiffreadd);
                                     res = calcul.getRes();
-                                    liste.add(resbef + "+" + chiffreadd + "=" + calcul.getRes());
+                                    liste.add(resbef + "*" + chiffreadd + "=" + calcul.getRes());
                                 } else if (choixadd == 4) {
                                     System.out.println("Quel chiffre diviser a " + res + " ?");
                                     int chiffreadd = sc.nextInt();
@@ -138,7 +138,7 @@ public class Main {
                                     int resbef = calcul.getRes();
                                     calcul.rajoutdiv(res, chiffreadd);
                                     res = calcul.getRes();
-                                    liste.add(resbef + "+" + chiffreadd + "=" + calcul.getRes());
+                                    liste.add(resbef + "/" + chiffreadd + "=" + calcul.getRes());
                                 }
                             } catch (InputMismatchException e) {
                                 System.out.println("Erreur : Veuillez entrer un nombre valide");
